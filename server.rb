@@ -18,7 +18,15 @@ class Server <Sinatra::Base
     render :erb, :index
   end
 
+  get '/mumbles' do
 
+  end
+
+  get '/mumble/new' do
+  end
+
+  get '/mumbles/:id' do
+  end
 
 end#Server
 
