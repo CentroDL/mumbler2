@@ -3,13 +3,20 @@
 <html>
 <head>
   <title>Mumbler</title>
+  <link rel="stylesheet" type="text/css" href="/normalize.css">
   <link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 <body>
+<div class="container">
   <div class="header">
     <h1>Mumbler<h1>
+      <ul>
+        <li><a href="/mumbles/new">New Mumble</a></li>
+        <li><a href="/mumbles">All Mumbles</a></li>
+      </ul>
   </div>
 
   <%= yield %>
+</div><!-- container -->
 </body>
 </html>

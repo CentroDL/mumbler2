@@ -1,8 +1,9 @@
 module Mumbler
 
-class Server <Sinatra::Base
+class Server < Sinatra::Base
 
   enable :logging
+  helpers DatabaseHelper, GravatarHelper
 
   configure :development do
     require 'pry'
@@ -15,17 +16,26 @@ class Server <Sinatra::Base
   end
 
   get '/' do
-    render :erb, :index
+    redirect 'mumbles'
   end
 
   get '/mumbles' do
-
+    @mumbles = get_mumbles
+    erb :mumbles
   end
 
-  get '/mumble/new' do
+  get '/mumbles/new' do
+    erb :new
   end
 
   get '/mumbles/:id' do
+    @mumble = get_mumble(params[:id])
+    erb :mumble
+  end
+
+  post '/mumbles' do
+    id = create_mumble(params)
+    redirect "/mumbles/#{id}"
   end
 
 end#Server

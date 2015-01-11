@@ -1,0 +1,25 @@
+<h1> Mumble </h1>
+
+<%= @mumble %>
+<div>
+<img src="<%=@mumble["image"] %>">
+<img src="<%=@mumble["author_thumbnail"]%>">
+<p><%= @mumble["text"] %></p>
+<p><%= @mumble["author_handle"] %></p>
+<p><%= @mumble["date"] %></p>
+<p><%= @mumble["tags"] %></p>
+<p><%= @mumble["likes"] %> Likes </p>
+
+
+</div>
+
+<!--
+text*
+image*
+date*
+tags*
+author_email
+author_handle*
+author_thumbnail*
+likes (always is initialized to 0)*
+-->

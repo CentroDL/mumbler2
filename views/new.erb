@@ -1,0 +1,26 @@
+
+<div class="content">
+<h1>New Mumble</h1>
+
+<form method="POST" action="/mumbles" >
+  <label>Text:<input name="text" type="text" required></label>
+  <label>Image:<input name="image" type="url"></label>
+  <label>Date:<input name="date" type="date"></label>
+  <label>Tags:<input name="tags" type="text" ></label>
+  <label>Email:<input name="author_email" type="email" required></label>
+  <label>Handle:<input name="author_handle" type="text"></label>
+  <label>Thumbnail:<input name="author_thumbnail" type="url"></label>
+  <input type="submit" value="Save!">
+</form>
+
+<!--
+text
+image
+date
+tags
+author_email
+author_handle
+author_thumbnail
+likes (always is initialized to 0)
+-->
+</div>

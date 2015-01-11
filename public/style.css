@@ -1,4 +1,26 @@
 html{
 
-  background-color: blue;
+  background-color: #FFF;
+}
+
+.header{
+  color: white;
+  display: inline-block;
+  width: 100%;
+  background-color: black;
+  position: fixed;
+  height: 100px;
+}
+
+.header li, h1{
+  display: inline;
+}
+
+.container{
+  width: 960px;
+  margin: 0 auto;
+}
+
+.content{
+  padding-top: 150px;
 }
