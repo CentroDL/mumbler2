@@ -29,6 +29,10 @@ html{
   width: 50px;
 }
 
+a, a:visited, a:hover{
+  text-decoration: none;
+}
+
 #author-thumb{
   width: 128px;
   border-radius: 64px;

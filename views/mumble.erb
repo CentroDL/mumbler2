@@ -1,7 +1,8 @@
 <h1> Mumble </h1>
 
 <%= @mumble %>
-<div>
+<div class="content">
+  <div class="mumble">
 <img src="<%=@mumble["image"] %>">
 <img src="<%=@mumble["author_thumbnail"]%>">
 <p><%= @mumble["text"] %></p>
@@ -9,7 +10,7 @@
 <p><%= @mumble["date"] %></p>
 <p><%= @mumble["tags"] %></p>
 <p><%= @mumble["likes"] %> Likes </p>
-
+</div>
 
 </div>
 
