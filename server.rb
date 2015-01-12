@@ -20,7 +20,7 @@ class Server < Sinatra::Base
   end
 
   get '/mumbles' do
-    @mumbles = get_mumbles.sort_by { |mumble| mumble["date"]}
+    @mumbles = get_mumbles
     erb :mumbles
   end
 
@@ -29,6 +29,7 @@ class Server < Sinatra::Base
   end
 
   get '/mumbles/:id' do
+    $db.hincrby "mumble:#{params[:id]}", "likes", 1 if params["like"] == "true"
     @mumble = get_mumble(params[:id])
     erb :mumble
   end

@@ -24,3 +24,7 @@ html{
 .content{
   padding-top: 150px;
 }
+
+#like{
+  width: 50px;
+}
