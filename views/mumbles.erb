@@ -1,13 +1,21 @@
 
 
 <div class="content">
+
   <% @mumbles.each_with_index do |mumble, index| %>
-    <a herf="/mumbles/<%= index + 1 %>"><img src="<%= mumble["image"] %>"></a>
-    <img src="<%= mumble["author_thumbnail"]%>">
-    <p><%= mumble["text"] %></p>
-    <p><%= mumble["author_handle"] %></p>
-    <p><%= mumble["date"] %></p>
-    <p><%= mumble["tags"] %></p>
-    <p><a href="/mumbles/<%= index + 1 %>?like=true"><img id="like" src="http://www.endlessicons.com/wp-content/uploads/2013/06/heart-icon-614x460.png" size="20px"></a><%= mumble["likes"] %> Likes </p>
+  <div class="mumble">
+    <span class="post-head">
+      <p><%= mumble["author_handle"] %></p>
+      <img id="author-thumb" src="<%= mumble["author_thumbnail"]%>">
+    </span>
+    <a href="/mumbles/<%= index + 1 %>"><img src="<%= mumble["image"] %>"></a>
+    <span>
+      <p><%= mumble["text"] %></p>
+      <p><%= mumble["date"] %></p>
+      <p><%= mumble["tags"] %></p>
+    </span>
+    <p><a href="/mumbles/<%= index + 1 %>?like=true"><img id="like" src="http://www.endlessicons.com/wp-content/uploads/2013/06/heart-icon-614x460.png" size="20px">
+      </a><%= mumble["likes"] %>Likes</p>
+    </div>
   <% end %>
 </div>

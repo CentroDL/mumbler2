@@ -28,3 +28,28 @@ html{
 #like{
   width: 50px;
 }
+
+#author-thumb{
+  width: 128px;
+  border-radius: 64px;
+}
+
+.post_head{
+  display: inline-block;
+}
+
+.mumble{
+  display: inline-block;
+  width: 400px;
+  background: #d3d3d3;
+  margin: 30px 15px;
+}
+
+.mumble img{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.mumble p{
+  display: inline-block;
+}
