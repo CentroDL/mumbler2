@@ -20,7 +20,7 @@ class Server < Sinatra::Base
   end
 
   get '/mumbles' do
-    @mumbles = get_mumbles
+    @mumbles = get_mumbles.sort_by { |mumble| mumble["date"]}
     erb :mumbles
   end
 

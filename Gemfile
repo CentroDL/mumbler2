@@ -7,6 +7,7 @@ gem 'json'
 gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'httparty'
+gem 'digest'
 
 group :development do
   gem 'pry'
